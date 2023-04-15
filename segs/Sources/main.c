@@ -3,7 +3,69 @@
 #include "sw_led.h"
 #include "sci.h"
 #include "pit.h"
+#include "seg.h"
 
+
+
+//Define the test you want to do 
+#define SEGTEST
+
+void delay (void);
+void ledFlicker(void);
+
+void main (void){
+ char c = 0;
+ char buffer[256] ={0};
+ int i = 0; //scratch data
+ int digit = 0;
+ int val = 0;
+ 
+ 
+ 	EnableInterrupts;
+
+//intit LEDs and switches
+
+ SWL_Init();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 //define the tests you want to do
 #define PITTEST
 
@@ -108,3 +170,4 @@ void ledFlicker(void)  {
   
   //led test code
 }
+ */

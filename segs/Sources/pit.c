@@ -51,7 +51,7 @@ int PIT_Init(PIT_Channel chan,PIT_Interrupt intState, unsigned long ulBusRate, u
   PITINTE |- chan;
   else 
   PITINTE &= ~chan;
-  
+                                                                         
   //Enable the channel 
   PITCE |= chan;
   

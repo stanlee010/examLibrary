@@ -96,3 +96,26 @@ unsigned char sci0_rxByte(unsigned char * pData);
 void sci_txByte (SCI_Base sci, unsigned char data);
 void sci_txStr (SCI_Base sci, char const *straddr);
 unsigned char sci_rxByte(SCI_Base sci, unsigned char * pData);
+
+
+
+
+#ifndef _SEGSH_
+
+ typedef enum  Segs_DPOption {
+  Segs_DP_OFF, Segs_DP_ON
+ } Segs_DPOption;
+ 
+ //for functions that specify the upper or lower full display
+ typedef enum Segs_LineOption{
+  Segs_LineTop, Segs_LineBottom 
+ } Segs_Line_Option;
+ 
+ //setup ports to speak with 7-segs
+ void Segs_Init (Void)
+ 
+ //control segs manually
+ void Segs_Custom(unsigned char Addr, unsigned char Value);
+ 
+ //show HEX decoding (changes all display to HEX, w/wo dp)
+ void Segs_Normal (unsigned char Addr, unsigned char Value, Segs_DPOption dp);
